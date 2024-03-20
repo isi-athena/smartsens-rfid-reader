@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="ThingsBoard Details">
+
+        <EditTextPreference
+            app:defaultValue="https://tempsens.isi.gr"
+            app:key="thingsboard-domain"
+            app:title="Domain"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="tempsenstb1@isi.gr"
+            app:key="thingsboard-tenant-username"
+            app:title="Tenant username"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="39r$LA6E8nli"
+            app:key="thingsboard-tenant-password"
+            app:title="Tenant password" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Default Location">
+
+        <ListPreference
+            android:key="loc_list"
+            android:entries="@array/Locations"
+            android:entryValues="@array/LocationsValues"
+            app:defaultValue=""
+            app:title="Choose Location"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Configuration">
+
+        <SeekBarPreference
+            app:key="scanner_power"
+            app:defaultValue="50"
+            app:title="Scanner Power"
+            app:seekBarIncrement="10"
+            />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
